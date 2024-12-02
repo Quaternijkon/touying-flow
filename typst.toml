@@ -1,11 +1,11 @@
 [package]
 name = "touying-flow"
-version = "1.0.1"
+version = "1.1.0"
 entrypoint = "theme.typ"
 authors = ["Quaternijkon<https://github.com/Quaternijkon>"]
 license = "MIT"
 description = "Discard irrelevant decorative elements, aiming to better immerse the audience into a state of flow."
-repository = "https://github.com/Quaternijkon/Typst_FLOW"
+repository = "https://github.com/Quaternijkon/touying-flow"
 keywords = ["presentation", "slides", "lecture", "touying", "university"]
 categories = ["presentation"]
 disciplines = []

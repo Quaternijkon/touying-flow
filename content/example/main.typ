@@ -1,10 +1,17 @@
-// #import "../../theme.typ":*
-#import "@preview/touying-flow:1.0.1":*
+#import "../../theme.typ":*
+// #import "@preview/touying-flow:1.1.0":*
 #show: flow-theme.with(
   aspect-ratio: "16-9",
   footer: self => self.info.title,
   footer-alt: self => self.info.subtitle,
   navigation: "mini-slides",
+  primary:rgb(0,108,57),//rgb("#006c39"),
+  secondary:rgb(161,63,61),//rgb("#a13f3d"),
+  // text-font: ("Libertinus Serif"),
+  // text-size: 20pt,
+  // code-font: ("Jetbrains Mono NL","PingFang SC"),
+  // code-size: 16pt,
+
   config-info(
     title: [Title],
     subtitle: [Subtitle],

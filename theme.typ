@@ -59,11 +59,11 @@
     grid(
   rows: (1fr,1fr),
   gutter: 3pt,
-  text(fill: self.colors.primary, utils.call-or-display(self, self.store.footer), size: .8em),
-  text(fill: self.colors.primary.lighten(40%), utils.call-or-display(self, self.store.footer-alt), size: .7em),
+  text(fill: self.colors.secondary, utils.call-or-display(self, self.store.footer), size: .8em),
+  text(fill: self.colors.secondary.lighten(40%), utils.call-or-display(self, self.store.footer-alt), size: .7em),
 ),
     
-    text(fill: self.colors.primary, utils.call-or-display(self, self.store.footer-right), size: 1em),
+    text(fill: self.colors.secondary, utils.call-or-display(self, self.store.footer-right), size: 1em),
   )
 }
 
@@ -253,7 +253,7 @@
     components.adaptive-columns(
       start: align(right)[#text(
         2em,
-        fill: self.colors.primary,
+        fill: self.colors.secondary,
         weight: "bold",
         utils.call-or-display(self, title),
         // font: Ar,
@@ -393,7 +393,11 @@
   footer-alt: none,
   footer-right: context utils.slide-counter.display() + " / " + utils.last-slide-number,
   primary: rgb("#004098"),
-  secondary: rgb("#543795"),
+  secondary: rgb("#004098"),
+  text-font:("Libertinus Serif"),
+  code-font:("Jetbrains Mono NL","PingFang SC"),
+  text-size: 20pt,
+  code-size: 16pt,
   alpha: 25%,
   subslide-preamble: self => block(
     text(1.2em, weight: "bold", fill: self.colors.primary, utils.display-current-heading(depth: self.slide-level)),
@@ -401,7 +405,8 @@
   ..args,
   body,
 ) = {
-  set text(size: 20pt)
+  set text(size: text-size,font: text-font)
+  show raw: set text(font:code-font,size: code-size)
   set par(justify: true)
 
   show: touying-slides.with(
@@ -436,6 +441,7 @@
       neutral-light: rgb("#f3f3f3"),
       neutral-lightest: rgb("#ffffff"),
       primary: primary,
+      secondary: secondary,
     ),
     // save the variables for later use
     config-store(
@@ -453,7 +459,7 @@
   show: codly-init.with()
 
   show emph: it => {  
-    underline(stroke: (thickness: 1em, paint: primary.transparentize(95%), cap: "round"),offset: -7pt,background: true,evade: false,extent: -8pt,text(primary, it.body))
+    underline(stroke: (thickness: 1em, paint: primary.transparentize(90%), cap: "round"),offset: -7pt,background: true,evade: false,extent: -8pt,text(primary, it.body))
   }
 
   show outline.entry.where(

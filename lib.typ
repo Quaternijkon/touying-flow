@@ -1,4 +1,5 @@
-#import "./src/exports.typ": *
+// #import "./src/exports.typ": *
+#import "@preview/touying:0.5.3": *
 #import "@preview/mitex:0.2.4" : *
 #import "@preview/numbly:0.1.0": numbly
 #import "@preview/cuti:0.2.1": show-cn-fakebold //显示粗体
